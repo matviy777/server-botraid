@@ -1,6 +1,6 @@
 from flask import Flask, request, request
 from flask_socketio import SocketIO, emit, join_room
-
+import os
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret"
 
@@ -114,5 +114,6 @@ def disconnect():
 
             if len(rooms[room]["players"]) == 0:
                 del rooms[room]
-print("Сервер запущено на http://localhost:5000")
-socketio.run(app, host="0.0.0.0", port=5000)
+port=int(os.environ.get("PORT", 5000))
+print("Сервер запущено на порті: {port}")
+socketio.run(app, host="0.0.0.0", port=port)
