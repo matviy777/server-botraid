@@ -387,7 +387,7 @@ while running:
 
             pygame.draw.rect(
                 screen,
-                (0, 0, 0),
+                (0, 255, 0),
                 border_rect,
                 width=5,
                 border_radius=5
@@ -408,19 +408,19 @@ while running:
     # Інші варіанти — білий текст.
 
     rock_color = (
-        (0, 0, 0)
+        (0, 255, 0)
         if selected_choice == "rock"
         else (255, 255, 255)
     )
 
     paper_color = (
-        (0, 0, 0)
+        (0, 255, 0)
         if selected_choice == "paper"
         else (255, 255, 255)
     )
 
     scissors_color = (
-        (0, 0, 0)
+        (0, 255, 0)
         if selected_choice == "scissors"
         else (255, 255, 255)
     )
